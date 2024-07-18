@@ -1,0 +1,102 @@
+<section id="hero">
+  <div class="grid-container">
+    <div>
+      <h1>Hi, I'm <span>Agustín</span>👋🏻</h1>
+      <p>
+        I'm an advanced Computer Engineering student at the Faculty of
+        Engineering of the Universidad de la República, Uruguay. <br /> I'm passionate
+        about technology and software development. <br /> I'm always looking for
+        new challenges and opportunities to learn and grow.
+      </p>
+    </div>
+    <a
+      href="https://www.linkedin.com/in/agust%C3%ADn-torres/"
+      target="_blank"
+      class="hero-image-wrapper"
+    >
+      <img src="/me.jpeg" alt="" />
+    </a>
+  </div>
+</section>
+
+<style>
+
+
+/*   section {
+    max-width: 800px;
+    margin-inline: auto;
+  } */
+
+
+  .grid-container {
+    justify-items: center;
+    align-items: center;
+  }
+
+  span {
+    color: transparent;
+    background: linear-gradient(60deg, #306998, #124772);
+    background-clip: text;
+  }
+  .hero-image-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    border: 2px solid white;
+    box-shadow: -1px 2px 26px 0px rgba(255, 255, 255, 0.63);
+    -webkit-box-shadow: -1px 2px 26px 0px rgba(255, 255, 255, 0.63);
+    -moz-box-shadow: -1px 2px 26px 0px rgba(255, 255, 255, 0.63);
+    transition:  box-shadow 0.3s;
+  }
+
+  .grid-container img {
+    filter: grayscale(100%);
+    object-fit: cover;
+    object-position: center;
+    transition:
+      transform 0.3s,
+      filter 0.3s;
+  }
+
+  .grid-container img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.01);
+  }
+
+  .hero-image-wrapper:hover {
+        box-shadow: -1px 2px 26px 0px rgba(48, 105, 152, 0.8);
+        -webkit-box-shadow: -1px 2px 26px 0px rgba(48, 105, 152, 0.8);
+        -moz-box-shadow: -1px 2px 26px 0px rgba(48, 105, 152, 0.8);
+        border: 2px solid #306998;
+    }
+
+    @media screen and (min-width: 661px) {
+      section {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (max-width: 660px) {
+      .hero-image-wrapper {
+        align-self: start;
+      }
+
+      .grid-container > div {
+        align-self: center;
+
+        h1 {
+          text-align: center
+        }
+      }
+
+/*       .grid-container {
+        height: auto;
+      } */
+    }
+
+</style>

@@ -1,0 +1,280 @@
+<section id="projects">
+  <div class="grid-column-container">
+    <div class="projects-header">
+      <h2>Projects 📝</h2>
+    </div>
+    <div class="projects-carousel">
+      <a href="https://webir-peliculas.vercel.app/">
+        <div class="project peliculeando">
+          <div class="image-wrapper">
+            <img src="Webir.PNG" alt="Project 1" />
+          </div>
+          <div class="project-information">
+            <h3>Peliculeando</h3>
+            <p>
+              A web page where you can consult any movie or TV show data, with
+              an AI Chatbot that helps you choose the best movie that fits you
+              by considering your favorite actors or genres.
+            </p>
+          </div>
+          <div class="project-technologies">
+            <p>React</p>
+            <p>ExpressJS</p>
+            <p>Gemini</p>
+            <p>Vite</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://blogify-frontend-one.vercel.app/login">
+        <div class="project blogify">
+          <div class="image-wrapper">
+            <img src="Blogify.PNG" alt="Project 1" />
+          </div>
+          <div class="project-information">
+            <h3>Blogify</h3>
+            <p>
+              Blogify is a social network I created to learn different
+              technologies. It employs Java Spring Boot, JPA, and JWT
+              authentication on the backend, with deployment handled on render
+              using Docker.
+            </p>
+          </div>
+          <div class="project-technologies">
+            <p>React</p>
+            <p>Springboot</p>
+            <p>PostgreSQL</p>
+            <p>JWT</p>
+            <p>Docker</p>
+          </div>
+        </div>
+      </a>
+      <div class="projects-soon">
+        <div class="image-wrapper-soon">
+          <img
+            src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c29vbnxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Project 1"
+          />
+        </div>
+        <div class="project-information-soon">
+          <h3>More projects coming soon!</h3>
+          <p>🔨 🔜</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  
+  
+  .projects-carousel a {
+    text-decoration: none;
+    color: unset;
+  }
+  .grid-column-container {
+    display: grid;
+    padding-top: 50px;
+    gap: 2rem;
+    grid-template-rows: auto 1fr;
+    width: 100%;
+    align-items: start;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid #0e0e0e;
+    border-radius: 5px;
+    gap: 1rem;
+    position: relative;
+    box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 1);
+    -webkit-box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 1);
+    -moz-box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 0.63);
+    justify-self: start;
+  }
+
+  .image-wrapper {
+    min-height: 25%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .project-information {
+    text-align: center;
+    align-items: start;
+    height: 100%;
+    padding: 0px 15px 15px 15px;
+    font-size: 1rem;
+  }
+
+  .projects-header h2 {
+    text-align: start;
+    font-size: 2rem;
+  }
+
+  .projects-carousel {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: start;
+    padding-bottom: 2rem;
+  }
+
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0px 15px 15px 15px;
+  }
+
+  .project-technologies p {
+    border: 1px solid #a8a7a7;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    /* transition:
+      background-color 0.3s,
+      color 0.3s,
+      border 0.3s,
+      box-shadow 0.3s; */
+    pointer-events: none;
+  }
+
+  /*   .project-technologies p:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    box-shadow: -1px 2px 15px 0px rgba(231, 231, 231, 0.63);
+    -webkit-box-shadow: -1px 2px 15px 0px rgba(231, 231, 231, 0.63);
+    -moz-box-shadow: -1px 2px 15px 0px rgba(231, 231, 231, 0.63);
+    cursor: default;
+  } */
+
+  .projects-soon {
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid #0e0e0e;
+    border-radius: 5px;
+    gap: 1rem;
+    position: relative;
+    box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 0.63);
+    -webkit-box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 0.63);
+    -moz-box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 0.63);
+    justify-self: start;
+  }
+
+  .project,
+  .projects-soon,
+  .project:hover,
+  .projects-soon:hover {
+    transition:
+      border 0.3s,
+      box-shadow 0.3s;
+    background-color: #040404;
+  }
+  .projects-soon:hover,
+  .project:hover {
+    border: 1px solid white;
+    box-shadow: -1px 2px 26px 0px rgba(255, 255, 255, 0.63);
+    -webkit-box-shadow: -1px 2px 26px 0px rgba(255, 255, 255, 0.63);
+    -moz-box-shadow: -1px 2px 26px 0px rgba(255, 255, 255, 0.63);
+  }
+
+  .blogify:hover {
+    border: 1px solid rgb(44, 222, 59);
+    box-shadow: -1px 2px 26px 0px rgba(44, 222, 59, 0.63);
+    -webkit-box-shadow: -1px 2px 26px 0px rgba(44, 222, 59, 0.63);
+    -moz-box-shadow: -1px 2px 26px 0px rgba(44, 222, 59, 0.63);
+  }
+  .peliculeando:hover {
+    border: 1px solid rgb(179, 244, 57);
+    box-shadow: -1px 2px 26px 0px rgba(179, 244, 57, 0.63);
+    -webkit-box-shadow: -1px 2px 26px 0px rgba(179, 244, 57, 0.63);
+    -moz-box-shadow: -1px 2px 26px 0px rgba(179, 244, 57, 0.63);
+  }
+
+  .image-wrapper-soon {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .image-wrapper-soon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(2px);
+    opacity: 0.2;
+  }
+
+  .project-information-soon {
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  section {
+    height: auto;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .project-information > h3,
+  .project-information-soon > h3,
+  .project-information-soon > p {
+    font-size: 1.5rem;
+    line-height: normal;
+    margin-bottom: 0.5rem;
+  }
+
+  @media screen and (max-width: 660px) {
+    .projects-carousel {
+      justify-content: center;
+    }
+    .project,
+    .projects-soon {
+      justify-self: center;
+    }
+
+    .projects-header > h2 {
+      text-align: center;
+    }
+
+    .project-information > h3,
+    .project-information-soon > h3,
+    .project-information-soon > p {
+      text-align: center;
+    }
+
+    .grid-column-container {
+      padding-top: 0px;
+    }
+  }
+
+</style>

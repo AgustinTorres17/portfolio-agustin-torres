@@ -1,0 +1,85 @@
+<section id="contact">
+  <div class="contact-header">
+    <h2>Contact 📧</h2>
+  </div>
+  <div class="contact-container">
+    <div class="contact-info">
+      <p>
+        For professional inquiries or opportunities, please do not hesitate to
+        contact me ✌🏻.
+      </p>
+      <ul class="contact-methods">
+        <li class="contact-method">
+          <h4>Email</h4>
+          <a target="_blank" href="mailto:agustintorres1701@gmail.com"
+            >agustintorres1701@gmail.com</a
+          >
+        </li>
+        <li class="contact-method">
+          <h4>LinkedIn</h4>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/agust%C3%ADn-torres-mari-b35813268/"
+            >Agustin Torres</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <style>
+      #contact {
+        height: auto;
+      }
+      .contact-info {
+        max-width: 700px;
+      }
+
+      .contact-info a {
+        text-decoration: none;
+        color: #747474;
+        font-style: italic;
+        position: relative;
+        transition: color 0.25s ease-out;
+      }
+
+      .contact-method {
+        margin-block: 1rem;
+      }
+
+      .contact-info a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: white; /* O el color que prefieras */
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      .contact-info a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      .contact-info a:hover {
+        color: #ffffff;
+      }
+
+      .contact-methods {
+        margin-left: 2rem;
+      }
+
+      @media screen and (max-width: 660px) {
+        .contact-methods {
+            margin-left: 0;
+        }
+        ul {
+            list-style: none;
+        }
+      }
+    </style>
+  </div>
+</section>

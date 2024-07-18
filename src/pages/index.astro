@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<Header />
+	<main>	
+		<Hero />
+		<About />
+		<Projects />
+		<Skills />
+		<Experience />
+		<Education />
+		<Contact />
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1200px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	
+</style>

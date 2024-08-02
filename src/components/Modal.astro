@@ -1,0 +1,50 @@
+---
+let isOpen = false;
+let modalData = {};
+
+const openModal = (data) => {
+  modalData = data;
+  isOpen = true;
+};
+
+const closeModal = () => {
+  isOpen = false;
+};
+---
+
+<style>
+    .modal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      visibility: {isOpen ? 'visible' : 'hidden'};
+      opacity: {isOpen ? 1 : 0};
+      transition: visibility 0s, opacity 0.5s;
+    }
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 600px;
+      text-align: center;
+    }
+    .modal-content img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+  
+  <div class={isOpen ? 'modal open' : 'modal'} onclick={closeModal}>
+    <div class="modal-content" onclick={(e) => e.stopPropagation()}>
+      <h2>{modalData.title}</h2>
+      <img src={modalData.imgSrc} alt={modalData.title} />
+      <p>{modalData.description}</p>
+      <button onClick={closeModal}>Close</button>
+    </div>
+  </div>

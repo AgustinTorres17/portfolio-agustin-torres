@@ -1,75 +1,78 @@
 <section id="education">
-<div class="education-header">
+  <div class="education-header">
     <h2>Education 📚</h2>
-</div>
-<div class="education-container">
+  </div>
+  <div class="education-container">
     <div class="education-info">
-        <h3>Computer Engineering</h3>
-        <p>Facultad de Ingeniería - Universidad de la República</p>
-        <p class="education-time">2021 - Present</p>
-        <h4>Relevant Subjects</h4>
-        <ul class="subjects">
-            <li>Computer Architecture</li>
-            <li>Operating Systems</li>
-            <li>Programming 1, 2, 3 and 4</li>
-            <li>Information Systems for Big Data Analysis</li>
-        </ul>
-        <h4>Current Subjects</h4>
-        <ul class="current-subjects">
-            <li>Software Engineering Project</li>
-            <li>Machine Learning</li>
-            <li>The Business of Software</li>
-            <li>Data Integration</li>
-        </ul>
+      <h3>Computer Engineering</h3>
+      <p>Facultad de Ingeniería - Universidad de la República</p>
+      <p class="education-time">2021 - Present</p>
+      <h4>Relevant Subjects</h4>
+      <ul class="subjects">
+        <li>Computer Architecture</li>
+        <li>Operating Systems</li>
+        <li>Programming 1, 2, 3 and 4</li>
+        <li>Information Systems for Big Data Analysis</li>
+      </ul>
+      <h4>Current Subjects</h4>
+      <ul class="current-subjects">
+        <li>Software Engineering Project</li>
+        <li>Machine Learning</li>
+        <li>The Business of Software</li>
+        <li>Data Integration</li>
+      </ul>
     </div>
-</div>
+  </div>
 </section>
 
 <style>
+  #education {
+    height: auto;
+    margin-bottom: 4rem;
+  }
+  .education-info {
+    margin-left: 2rem;
+    max-width: 700px;
+    position: relative;
+  }
 
-    #education {
-        height: auto;
+  .education-time {
+    font-size: 1rem;
+    color: #777;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+
+  .subjects,
+  .current-subjects {
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 660px) {
+    .education-info,
+    .subjects,
+    .current-subjects {
+      margin-left: 0;
     }
-    .education-info {
-        margin-left: 2rem;
-        max-width: 700px;
-        position: relative;
+    ul {
+      list-style: none;
+    }
+    li {
+      text-align: center;
+    }
+    h4 {
+      margin-top: 1rem;
     }
 
     .education-time {
-        font-size: 1rem;
-        color: #777;
-        position: absolute;
-        top: 10%;
-        right: 10%;
+      position: static;
+      font-size: 1.25rem;
     }
 
-    .subjects, .current-subjects {
-        margin-left: 3rem;
-        margin-bottom: 1rem;
+    .current-subjects {
+      font-style: italic;
     }
-
-    @media screen and (max-width: 660px) {
-        .education-info, .subjects, .current-subjects {
-            margin-left: 0;
-        }
-        ul {
-            list-style: none;
-        }
-        li {
-            text-align: center;
-        }
-        h4 {
-            margin-top: 1rem;
-        }
-
-        .education-time {
-            position: static;
-            font-size: 1.25rem;
-        }
-
-        .current-subjects {
-            font-style: italic;
-        }
-    }
+  }
 </style>

@@ -4,9 +4,15 @@
   </div>
   <div class="education-container">
     <div class="education-info">
-      <h3>Computer Engineering</h3>
-      <p>Facultad de Ingeniería - Universidad de la República</p>
-      <p class="education-time">2021 - Present</p>
+      <div class="education-title">
+        <h3>Computer Engineering</h3>
+        <p class="education-time">2021 - Present</p>
+      </div>
+      <h5>Facultad de Ingeniería - Universidad de la República</h5>
+      <div class="education-scolarship">
+        <h4>Scolarship</h4>
+        <a href="escolaridad.pdf" download>Download My Scolarship</a>
+      </div>
       <h4>Relevant Subjects</h4>
       <ul class="subjects">
         <li>Computer Architecture</li>
@@ -41,15 +47,58 @@
   .education-time {
     font-size: 1rem;
     color: #777;
-    position: absolute;
-    top: 10%;
-    right: 10%;
+    font-style: italic;
   }
 
   .subjects,
   .current-subjects {
     margin-left: 3rem;
     margin-bottom: 1rem;
+  }
+
+  .education-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3.5rem;
+  }
+
+  h5 {
+    color: #bbb;
+  }
+
+  a {
+    text-decoration: none;
+    color: #747474;
+    font-style: italic;
+    position: relative;
+    transition: color 0.25s ease-out;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white; /* O el color que prefieras */
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  a:hover {
+    color: #ffffff;
+  }
+
+  .education-scolarship {
+    margin-block: 1rem;
   }
 
   @media screen and (max-width: 660px) {
@@ -64,10 +113,10 @@
     li {
       text-align: center;
     }
-    h4 {
+    /*     h4 {
       margin-top: 1rem;
     }
-
+ */
     .education-time {
       position: static;
       font-size: 1.25rem;
@@ -75,6 +124,24 @@
 
     .current-subjects {
       font-style: italic;
+    }
+
+    .education-title {
+      padding-right: 0;
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .education-scolarship {
+      margin-block: 1.25rem;
     }
   }
 </style>

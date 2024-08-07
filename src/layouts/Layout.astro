@@ -140,7 +140,10 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
-  /* Registra tu font family personalizada y le indicamos al navegador dónde encontrarla. */
+
+  body > a {
+    display: none !important;
+  }
   @font-face {
     font-family: "Geist";
     src: url("/fonts/Geist-black") format("woff");

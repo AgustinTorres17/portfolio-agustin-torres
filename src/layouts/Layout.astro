@@ -294,6 +294,11 @@ const { title } = Astro.props;
     height: 100%;
   }
 
+  p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
   @media screen and (max-width: 660px) {
     .grid-container {
       grid-template-columns: 1fr;
@@ -306,6 +311,10 @@ const { title } = Astro.props;
     h3,
     h4 {
       text-align: center;
+    }
+
+    p {
+      font-size: 16px;
     }
 
     a {

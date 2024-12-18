@@ -134,11 +134,19 @@
       let currentIndex = 0;
       let slideWidth = 0;
 
-      // Una vez cargue la ventana, calculamos slideWidth
-      window.addEventListener("load", () => {
-        // Ahora que todo está cargado, el slide debería tener su ancho final
-        slideWidth = slides[0].getBoundingClientRect().width;
-      });
+      // Función para recalcular el ancho del slide
+      function recalculateSlideWidth() {
+        // Dado que cada .slider-item tiene width: 100%,
+        // el ancho del slide es el ancho del contenedor
+        slideWidth = container.clientWidth;
+        // Reposicionar el track en el slide actual
+        moveToIndex(currentIndex, false);
+      }
+
+      // Recalcular el ancho cuando todo haya cargado
+      window.addEventListener("load", recalculateSlideWidth);
+      // Y también al redimensionar la ventana
+      window.addEventListener("resize", recalculateSlideWidth);
 
       container.addEventListener("pointerdown", startDrag);
       container.addEventListener("pointerup", endDrag);
@@ -157,10 +165,8 @@
         if (!isDragging) return;
         isDragging = false;
 
-        // Cálculo del índice más cercano
         const newIndex = Math.round(Math.abs(currentTranslate) / slideWidth);
         currentIndex = Math.max(0, Math.min(newIndex, slides.length - 1));
-
         moveToIndex(currentIndex);
       }
 
@@ -172,10 +178,12 @@
         track.style.transform = `translateX(${currentTranslate}px)`;
       }
 
-      function moveToIndex(index) {
+      function moveToIndex(index, withTransition = true) {
         currentTranslate = index * -slideWidth;
         prevTranslate = currentTranslate;
-        track.style.transition = "transform 0.3s ease";
+        track.style.transition = withTransition
+          ? "transform 0.3s ease"
+          : "none";
         track.style.transform = `translateX(${currentTranslate}px)`;
       }
     });
@@ -251,6 +259,15 @@
     touch-action: none;
     max-height: 600px;
   }
+  
+  .slider-item {
+    flex-shrink: 0;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; 
+    padding: 0; 
+  }
 
   .slider-item img {
     display: block;
@@ -267,17 +284,10 @@
     display: flex;
     will-change: transform;
     list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
-  .slider-item {
-    flex-shrink: 0;
-    position: relative;
-    box-sizing: border-box;
-    /* Asegúrate de que cada slide ocupe todo el ancho del contenedor */
-    width: 100%;
-    height: 100%; /* El alto puede ser fijo si así lo prefieres */
-    padding: 0; /* Quita el padding si no es necesario */
-  }
 
   @media screen and (max-width: 660px) {
     #projects {

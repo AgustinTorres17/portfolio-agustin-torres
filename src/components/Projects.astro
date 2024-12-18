@@ -1,280 +1,302 @@
 <section id="projects">
-  <div class="grid-column-container">
-    <div class="projects-header">
-      <h2>Projects 📝</h2>
-    </div>
-    <div class="projects-carousel">
-      <a href="https://webir-peliculas.vercel.app/">
-        <div class="project peliculeando">
-          <div class="image-wrapper">
-            <img src="Webir.webp" alt="Project 1" />
+  <h2>Projects 📝</h2>
+  <ul class="project-list">
+    <li class="project-item">
+      <div class="project-header">
+        <div class="project-details">
+          <h3>Oneplify</h3>
+          <div class="slider-container">
+            <ul class="slider-track">
+              <li class="slider-item">
+                <img
+                  src="/oneplify/oneplify1.png"
+                  alt="Oneplify screenshot 1"
+                />
+              </li>
+              <li class="slider-item">
+                <img
+                  src="/oneplify/oneplify2.png"
+                  alt="Oneplify screenshot 2"
+                />
+              </li>
+              <li class="slider-item">
+                <img
+                  src="/oneplify/oneplify3.png"
+                  alt="Oneplify screenshot 3"
+                />
+              </li>
+              <li class="slider-item">
+                <img
+                  src="/oneplify/oneplify4.png"
+                  alt="Oneplify screenshot 4"
+                />
+              </li>
+              <li class="slider-item">
+                <img
+                  src="/oneplify/oneplify5.png"
+                  alt="Oneplify screenshot 5"
+                />
+              </li>
+              <li class="slider-item">
+                <img
+                  src="/oneplify/oneplify6.png"
+                  alt="Oneplify screenshot 6"
+                />
+              </li>
+            </ul>
           </div>
-          <div class="project-information">
-            <h3>Peliculeando</h3>
-            <p>
-              A web page where you can consult any movie or TV show data, with
-              an AI Chatbot that helps you choose the best movie that fits you
-              by considering your favorite actors or genres.
-            </p>
-          </div>
-          <div class="project-technologies">
-            <p>React</p>
-            <p>ExpressJS</p>
-            <p>Gemini</p>
-            <p>Vite</p>
-          </div>
-        </div>
-      </a>
-      <a href="https://blogify-frontend-one.vercel.app/login">
-        <div class="project blogify">
-          <div class="image-wrapper">
-            <img src="Blogify.PNG" alt="Project 1" />
-          </div>
-          <div class="project-information">
-            <h3>Blogify</h3>
-            <p>
-              Blogify is a social network I created to learn different
-              technologies. It employs Java Spring Boot, JPA, and JWT
-              authentication on the backend, with deployment handled on render
-              using Docker.
-            </p>
-          </div>
-          <div class="project-technologies">
-            <p>React</p>
-            <p>Springboot</p>
-            <p>PostgreSQL</p>
-            <p>JWT</p>
-            <p>Docker</p>
-          </div>
-        </div>
-      </a>
-      <div class="projects-soon">
-        <div class="image-wrapper-soon">
-          <img
-            src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c29vbnxlbnwwfHwwfHx8MA%3D%3D"
-            alt="Project 1"
-          />
-        </div>
-        <div class="project-information-soon">
-          <h3>More projects coming soon!</h3>
-          <p>🔨 🔜</p>
+          <p>
+            Oneplify is a web application developed with my Software Engineering
+            Project team. <br /> It enables the management of employee leave at GoGrow,
+            provides access to their salary history, and allows users to view the
+            anniversaries and birthdays of other employees, as well as their current
+            status (e.g., whether they are on leave, celebrating a birthday, or marking
+            a company anniversary), among many other features.
+            <br />My role was Frontend lead. I was in charge of the development
+            of the user interface and the integration with the backend.
+          </p>
+          <ul class="tech-list">
+            <li>NextJS</li>
+            <li>Typescript</li>
+            <li>Ruby On Rails</li>
+            <li>PostgreSQL</li>
+            <li>Tailwind</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
+    </li>
+    <li class="project-item">
+      <div class="project-header">
+        <div class="project-details">
+          <h3>Peliculeando</h3>
+          <img
+            src="Webir.webp"
+            alt="Peliculeando screenshot"
+            class="project-image"
+          />
+          <p>
+            A web page that allows you to search for movies and TV shows by name
+            and genre, providing detailed information such as directors, main
+            actors, synopsis, and more. <br />It integrates Google’s Gemini AI
+            for personalized movie recommendations, enabling the chatbot to help
+            you select the best movie that fits your preferences.
+          </p>
+          <ul class="tech-list">
+            <li>React</li>
+            <li>ExpressJS</li>
+            <li>Gemini</li>
+            <li>Vite</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li class="project-item">
+      <div class="project-header">
+        <div class="project-details">
+          <h3>Blogify</h3>
+          <img
+            src="Blogify.PNG"
+            alt="Blogify screenshot"
+            class="project-image"
+          />
+          <p>
+            Blogify is a social network created to learn different technologies
+            and practice implementing CRUD operations, drawing inspiration from
+            X. <br /> It uses Java Spring Boot, JPA, and JWT authentication on the
+            backend, deployed on Render using Docker.<br /> It also allows user registration
+            and the posting of blog entries.
+          </p>
+          <ul class="tech-list">
+            <li>React</li>
+            <li>Spring Boot</li>
+            <li>PostgreSQL</li>
+            <li>JWT</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
 </section>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sliderContainers = document.querySelectorAll(".slider-container");
+
+    sliderContainers.forEach((container) => {
+      const track = container.querySelector(".slider-track");
+      const slides = Array.from(track.querySelectorAll(".slider-item"));
+
+      let isDragging = false;
+      let startX = 0;
+      let currentTranslate = 0;
+      let prevTranslate = 0;
+      let currentIndex = 0;
+      let slideWidth = 0;
+
+      // Una vez cargue la ventana, calculamos slideWidth
+      window.addEventListener("load", () => {
+        // Ahora que todo está cargado, el slide debería tener su ancho final
+        slideWidth = slides[0].getBoundingClientRect().width;
+      });
+
+      container.addEventListener("pointerdown", startDrag);
+      container.addEventListener("pointerup", endDrag);
+      container.addEventListener("pointerleave", endDrag);
+      container.addEventListener("pointermove", drag);
+
+      function startDrag(e) {
+        e.preventDefault();
+        container.setPointerCapture(e.pointerId);
+        isDragging = true;
+        startX = e.clientX;
+        track.style.transition = "none";
+      }
+
+      function endDrag() {
+        if (!isDragging) return;
+        isDragging = false;
+
+        // Cálculo del índice más cercano
+        const newIndex = Math.round(Math.abs(currentTranslate) / slideWidth);
+        currentIndex = Math.max(0, Math.min(newIndex, slides.length - 1));
+
+        moveToIndex(currentIndex);
+      }
+
+      function drag(e) {
+        if (!isDragging) return;
+        const currentX = e.clientX;
+        const diff = currentX - startX;
+        currentTranslate = prevTranslate + diff;
+        track.style.transform = `translateX(${currentTranslate}px)`;
+      }
+
+      function moveToIndex(index) {
+        currentTranslate = index * -slideWidth;
+        prevTranslate = currentTranslate;
+        track.style.transition = "transform 0.3s ease";
+        track.style.transform = `translateX(${currentTranslate}px)`;
+      }
+    });
+  });
+</script>
+
 <style>
-  
-  
-  .projects-carousel a {
-    text-decoration: none;
-    color: unset;
-  }
-  .grid-column-container {
-    display: grid;
-    padding-top: 50px;
-    gap: 2rem;
-    grid-template-rows: auto 1fr;
-    width: 100%;
-    align-items: start;
+  #projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
   }
 
-  .project {
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 500px;
-    overflow: hidden;
-    background-color: transparent;
-    border: 1px solid #0e0e0e;
-    border-radius: 5px;
-    gap: 1rem;
-    position: relative;
-    box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 1);
-    -webkit-box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 1);
-    -moz-box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 0.63);
-    /* justify-self: start; */
-  }
-
-  .image-wrapper {
-    min-height: 25%;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
-
-  .project-information {
-    text-align: center;
-    align-items: start;
-    height: 100%;
-    padding: 0px 15px 15px 15px;
-    font-size: 1rem;
-  }
-
-  .projects-header h2 {
-    text-align: start;
-    font-size: 2rem;
-  }
-
-  .projects-carousel {
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    justify-content: start;
-    padding-bottom: 2rem;
   }
 
-  .project-technologies {
+  .project-item {
+    margin-bottom: 2rem;
+  }
+
+  .project-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .project-details h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: bold;
+  }
+
+  .project-details p {
+    margin: 0.5rem 0 1rem 0;
+    line-height: 1.4;
+  }
+
+  .tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 0.5rem;
-    font-size: 1rem;
-    width: 100%;
-    padding: 0px 15px 15px 15px;
   }
 
-  .project-technologies p {
-    border: 1px solid #a8a7a7;
-    color: white;
-    padding: 5px;
-    border-radius: 10px;
-    /* transition:
-      background-color 0.3s,
-      color 0.3s,
-      border 0.3s,
-      box-shadow 0.3s; */
-    pointer-events: none;
+  .tech-list li {
+    background-color: #444;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
   }
 
-  /*   .project-technologies p:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid white;
-    box-shadow: -1px 2px 15px 0px rgba(231, 231, 231, 0.63);
-    -webkit-box-shadow: -1px 2px 15px 0px rgba(231, 231, 231, 0.63);
-    -moz-box-shadow: -1px 2px 15px 0px rgba(231, 231, 231, 0.63);
-    cursor: default;
-  } */
-
-  .projects-soon {
-    width: 300px;
-    height: 500px;
-    overflow: hidden;
-    background-color: transparent;
-    border: 1px solid #0e0e0e;
-    border-radius: 5px;
-    gap: 1rem;
+  .slider-container {
     position: relative;
-    box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 0.63);
-    -webkit-box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 0.63);
-    -moz-box-shadow: -1px 2px 26px 0px rgba(14, 14, 14, 0.63);
-    /* justify-self: start; */
-  }
-
-  .project,
-  .projects-soon,
-  .project:hover,
-  .projects-soon:hover {
-    transition:
-      border 0.3s,
-      box-shadow 0.3s;
-    background-color: #040404;
-  }
-  .projects-soon:hover,
-  .project:hover {
-    border: 1px solid white;
-    box-shadow: -1px 2px 26px 0px rgba(255, 255, 255, 0.63);
-    -webkit-box-shadow: -1px 2px 26px 0px rgba(255, 255, 255, 0.63);
-    -moz-box-shadow: -1px 2px 26px 0px rgba(255, 255, 255, 0.63);
-  }
-
-  .blogify:hover {
-    border: 1px solid rgb(44, 222, 59);
-    box-shadow: -1px 2px 26px 0px rgba(44, 222, 59, 0.63);
-    -webkit-box-shadow: -1px 2px 26px 0px rgba(44, 222, 59, 0.63);
-    -moz-box-shadow: -1px 2px 26px 0px rgba(44, 222, 59, 0.63);
-  }
-  .peliculeando:hover {
-    border: 1px solid rgb(179, 244, 57);
-    box-shadow: -1px 2px 26px 0px rgba(179, 244, 57, 0.63);
-    -webkit-box-shadow: -1px 2px 26px 0px rgba(179, 244, 57, 0.63);
-    -moz-box-shadow: -1px 2px 26px 0px rgba(179, 244, 57, 0.63);
-  }
-
-  .image-wrapper-soon {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
     overflow: hidden;
-  }
-
-  .image-wrapper-soon img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    filter: blur(2px);
-    opacity: 0.2;
+    cursor: grab;
+    margin-bottom: 1rem;
+    touch-action: none;
+    max-height: 600px;
   }
 
-  .project-information-soon {
-    text-align: center;
-    font-size: 1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  section {
+  .slider-item img {
+    display: block;
+    width: 100%;
     height: auto;
-    max-width: 1200px;
-    margin-inline: auto;
+    object-fit: contain;
   }
 
-  .project-information > h3,
-  .project-information-soon > h3,
-  .project-information-soon > p {
-    font-size: 1.5rem;
-    line-height: normal;
-    margin-bottom: 0.5rem;
+  .slider-container:active {
+    cursor: grabbing;
+  }
+
+  .slider-track {
+    display: flex;
+    will-change: transform;
+    list-style: none;
+  }
+
+  .slider-item {
+    flex-shrink: 0;
+    position: relative;
+    box-sizing: border-box;
+    /* Asegúrate de que cada slide ocupe todo el ancho del contenedor */
+    width: 100%;
+    height: 100%; /* El alto puede ser fijo si así lo prefieres */
+    padding: 0; /* Quita el padding si no es necesario */
   }
 
   @media screen and (max-width: 660px) {
-    .projects-carousel {
-      justify-content: center;
-    }
-    .project,
-    .projects-soon {
-      justify-self: center;
+    #projects {
+      padding: 1rem;
     }
 
-    .projects-header > h2 {
+    .project-header {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-details h3 {
+      font-size: 1.3rem;
       text-align: center;
     }
 
-    .project-information > h3,
-    .project-information-soon > h3,
-    .project-information-soon > p {
+    .project-details p {
+      font-size: 0.95rem;
       text-align: center;
-    }
-
-    .grid-column-container {
-      padding-top: 0px;
     }
   }
-
 </style>

@@ -140,6 +140,37 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+  body {
+    --sb-track-color: #141515;
+    --sb-thumb-color: #2b2b2b;
+    --sb-size: 10px;
+  }
+
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+  }
+
+  :root {
+    --sb-size: 12px;
+    --sb-track-color: #f1f1f1;
+    --sb-thumb-color: #888;
+  }
 
   body > a {
     display: none !important;

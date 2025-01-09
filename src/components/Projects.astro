@@ -157,6 +157,17 @@ import quePintaSnippet from "./../snippets/QuePintaSnippet.js";
           >
         </li>
       </ul>
+      <h3 class="header-title">Live Demo</h3>
+      <ul class="tech-list">
+        <li>
+          <a
+            class="nav-links"
+            href="https://que-pinta-front.vercel.app/"
+            target="_blank">Project Link</a
+          >
+        </li>
+      </ul>
+      <p class="paragraph-note"><span class="span-note">Backend Note:</span> Due to deployment environment characteristics, the backend may enter an inactive state after a period of disuse.</p>
     </li>
 
     <li class="project-item">
@@ -431,6 +442,16 @@ import quePintaSnippet from "./../snippets/QuePintaSnippet.js";
     transform-origin: bottom left;
   }
 
+  .paragraph-note { 
+    color: #ddd;
+    margin-top: 1rem;
+  }
+
+  .span-note { 
+    font-weight: bold;
+    font-style: italic;
+  }
+
   @media screen and (max-width: 660px) {
     #projects {
       padding: 1rem;
@@ -540,4 +561,6 @@ import quePintaSnippet from "./../snippets/QuePintaSnippet.js";
       scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
     }
   }
+
+
 </style>
